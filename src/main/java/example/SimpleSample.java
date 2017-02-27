@@ -50,6 +50,10 @@ public class SimpleSample extends ChaincodeBase {
 			for (String arg : args)
 				stub.delState(arg);
 			break;
+		case "query"
+			String re1 = query(stub,args);
+			System.out.println(re1);
+			return re1;
 		default: 
 			return transfer(stub, args);
 		}
